@@ -346,3 +346,13 @@ h1>span:not(.period){color:#a9bed1}h1 .period{color:#8fe2ff}.micro{color:#b5c8d9
 @media(prefers-reduced-motion:reduce){
  .project,.project:hover,.project-foot a,.project-foot a:hover,.contact-links a,.contact-links a:hover{transition:none;transform:none}
 }
+
+/* DAYMARK / bonus project artwork */
+.project-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-featured{grid-column:1/-1}
+.daymark-visual{isolation:isolate;background:linear-gradient(145deg,#e7eddb,#cddbb8);color:#283528}
+.daymark-visual:before{content:"";position:absolute;inset:17px;border:1px solid rgba(44,64,39,.22);border-radius:12px;pointer-events:none}
+.daymark-mark{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.daymark-mark span{width:82px;height:82px;display:grid;place-items:center;border-radius:24px;background:#2d3a2b;color:#d6f18c;font:800 59px var(--display);letter-spacing:-.1em;box-shadow:0 15px 35px rgba(40,58,37,.2)}
+.daymark-mark i{font:8px var(--mono);letter-spacing:.16em;color:#607452}
+@media(max-width:760px){.project-list{grid-template-columns:1fr}}
