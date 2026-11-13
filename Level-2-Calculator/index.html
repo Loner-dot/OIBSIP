@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f0e9">
+  <meta name="description" content="TALLY is a focused, browser-based calculator built with HTML, CSS and vanilla JavaScript.">
+  <title>TALLY | Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="TALLY home">TALLY<span>°</span></a>
+      <div class="topbar-meta"><span class="status-dot"></span> A SMALL TOOL FOR CLEAR THINKING</div>
+      <span class="edition">WEB UTILITY / 001</span>
+    </header>
+    <section class="workspace" aria-labelledby="page-title">
+      <div class="intro">
+        <p class="eyebrow">THE EVERYDAY CALCULATOR</p>
+        <h1 id="page-title">Make the<br><em>numbers</em> work.</h1>
+        <p class="intro-copy">A quiet space for quick calculations. No clutter, just the answer.</p>
+        <div class="intro-note"><span class="note-index">01</span><span>Built for the basics.<br>Designed for the details.</span></div>
+      </div>
+      <section class="calculator" aria-label="Calculator">
+        <div class="calc-head"><span class="calc-label">TALLY / STANDARD</span><span class="live-indicator">READY <i></i></span></div>
+        <div class="display" aria-live="polite" aria-atomic="true">
+          <div class="expression" id="expression" aria-label="Current expression">0</div>
+          <div class="result-line"><span class="result-caption" id="result-caption">RESULT</span><output id="result" for="expression">0</output></div>
+        </div>
+        <div class="keypad" id="keypad">
+          <button class="key key-utility" type="button" data-action="clear" aria-label="Clear all">AC</button>
+          <button class="key key-utility" type="button" data-action="backspace" aria-label="Delete last character">DEL</button>
+          <button class="key key-utility" type="button" data-value="(" aria-label="Open parenthesis">(</button>
+          <button class="key key-operator" type="button" data-value="/" aria-label="Divide">÷</button>
+          <button class="key" type="button" data-value="7">7</button><button class="key" type="button" data-value="8">8</button><button class="key" type="button" data-value="9">9</button><button class="key key-operator" type="button" data-value="*" aria-label="Multiply">×</button>
+          <button class="key" type="button" data-value="4">4</button><button class="key" type="button" data-value="5">5</button><button class="key" type="button" data-value="6">6</button><button class="key key-operator" type="button" data-value="-" aria-label="Subtract">−</button>
+          <button class="key" type="button" data-value="1">1</button><button class="key" type="button" data-value="2">2</button><button class="key" type="button" data-value="3">3</button><button class="key key-operator" type="button" data-value="+" aria-label="Add">+</button>
+          <button class="key key-zero" type="button" data-value="0">0</button><button class="key" type="button" data-value=".">.</button><button class="key key-equals" type="button" data-action="equals" aria-label="Calculate result">=</button>
+        </div>
+        <div class="calc-foot"><span>KEYBOARD SUPPORTED</span><span>ESC CLEAR <b>·</b> ENTER SOLVE</span></div>
+      </section>
+    </section>
+    <footer class="footer"><span>THOUGHTFULLY SIMPLE. PRECISELY USEFUL.</span><span>DESIGNED & BUILT BY REM <b>© 2026</b></span></footer>
+  </main>
+</body>
+</html>
