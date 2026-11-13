@@ -1,35 +1,35 @@
-# DEGREE. | Temperature Converter
+# DEGREE° | Temperature Converter
 
-A responsive temperature conversion instrument built with HTML5, CSS3 and vanilla JavaScript.
+A mobile-first temperature conversion instrument with a custom glassmorphism visual system. Built with semantic HTML, CSS and vanilla JavaScript.
 
 ## Features
 
-- Convert between Celsius, Fahrenheit and Kelvin.
-- Live conversion as the value is entered.
-- Switch the reference unit without reloading the page.
-- Validates numeric input and rejects values below absolute zero.
-- Copy individual converted values.
-- Reset control and clear input feedback.
-- Responsive layout, keyboard focus states and reduced-motion support.
+- Live conversion between Celsius, Fahrenheit and Kelvin.
+- Switch the reference unit without reloading.
+- Rejects values below absolute zero.
+- Copy any converted reading.
+- Reset control, clear status feedback and responsive layout.
+- Keyboard focus states and reduced-motion support.
+- No framework, build step or package installation required.
 
-## Run locally
+## Run
 
-Open `index.html` in a modern browser. No build tools, package installation or framework are required.
+Open `index.html` in a modern browser.
 
-## Project structure
+## Files
 
-- `index.html` - semantic page structure and converter interface.
-- `styles.css` - responsive visual system and component styling.
-- `script.js` - conversion logic, validation and interactions.
+- `index.html` - accessible interface structure.
+- `styles.css` - atmospheric background, layered glass surfaces, responsive layout and interaction states.
+- `script.js` - conversion formulas, validation and clipboard behavior.
 
-## Conversion logic
+## Conversion formulas
 
-All input values are normalized to Celsius before the three output values are calculated.
+All values are normalized through Celsius.
 
-- Fahrenheit to Celsius: `(°F - 32) × 5 / 9`
-- Kelvin to Celsius: `K - 273.15`
-- Celsius to Fahrenheit: `(°C × 9 / 5) + 32`
-- Celsius to Kelvin: `°C + 273.15`
+- °F to °C: `(°F - 32) × 5 / 9`
+- K to °C: `K - 273.15`
+- °C to °F: `(°C × 9 / 5) + 32`
+- °C to K: `°C + 273.15`
 
 Absolute zero is -273.15 °C, -459.67 °F or 0 K.
 
