@@ -19,6 +19,7 @@ Open `index.html` in a browser. No build tools or dependencies are required.
 
 ## Project preview
 - AUREON: https://aureon-lyart.vercel.app/
+- DEGREE°: https://temperature-converter-mocha-nine.vercel.app/
 
 ## Contact
 - Telegram: https://t.me/rem_loves_reena
