@@ -9,3 +9,43 @@
 :focus-visible{outline:2px solid var(--red);outline-offset:4px}
 @media(max-width:760px){.wrap,.section-wrap{width:calc(100% - 40px)}.announcement{padding:0 20px;font-size:7px}.announcement>span:last-child{display:none}.nav{height:66px}.menu-toggle{display:flex;width:42px;height:42px;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:transparent;border:1px solid var(--line)}.menu-toggle span{width:17px;height:1px;background:var(--ink);transition:transform .2s}.menu-toggle[aria-expanded=true] span:first-child{transform:translateY(3.5px) rotate(45deg)}.menu-toggle[aria-expanded=true] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}.nav-menu{display:none;position:absolute;top:66px;left:0;right:0;background:#10110f;border-bottom:1px solid var(--line);padding:24px 20px 28px;flex-direction:column;align-items:stretch;gap:22px}.nav-menu.is-open{display:flex}.nav-cta{margin-top:3px}.hero{min-height:auto;padding-top:20px}.hero-kicker{font-size:7px}.hero-grid{grid-template-columns:1fr;gap:28px;padding:48px 0 35px}h1{font-size:clamp(58px,15vw,88px)}.intro{font-size:12px}.hero-aside{justify-self:stretch;max-width:none}.orbit-card{min-height:330px}.orbit-graphic{height:235px}.ring-one{width:205px;height:205px}.ring-two{width:160px;height:160px}.hero-bottom{font-size:7px}.hero-bottom span:last-child{max-width:155px;text-align:right;line-height:1.5}.about{padding-top:75px;padding-bottom:85px}.about-grid{grid-template-columns:1fr;gap:28px;padding-top:40px}.about-grid h2{font-size:52px}.about-copy .lead{font-size:17px}.skills{padding:75px 20px 80px}.skills-head{grid-template-columns:1fr;gap:22px;padding:40px 0 30px}.skills-head h2{font-size:50px}.skill-grid{grid-template-columns:1fr}.skill-card{min-height:0;border-right:0;border-bottom:1px solid var(--line);padding:21px}.skill-card:last-child{border-bottom:0}.skill-card h3{margin:22px 0 8px}.skill-card p{min-height:0}.work{padding-top:78px;padding-bottom:85px}.work-heading{display:block;padding:40px 0 30px}.work-heading h2{font-size:50px}.work-heading p{margin-top:17px}.project-list{grid-template-columns:1fr;gap:16px}.project-visual{height:230px}.visual-word{font-size:190px}.project-info{padding:19px}.project-info>p{min-height:0}.contact{padding-top:75px;padding-bottom:85px}.contact-main{margin-top:45px}.contact h2{font-size:clamp(68px,17vw,100px)}.contact-links a{grid-template-columns:75px 1fr 18px;font-size:11px}.footer-inner{grid-template-columns:1fr 1fr;gap:17px}.footer-inner p{grid-column:1/-1;grid-row:2}.footer-inner>a:not(.wordmark){grid-column:2;grid-row:1}.footer-inner small{grid-row:3}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Selected work: a unified editorial system with a distinct visual language per project. */
+.project-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+.project{min-width:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.project:hover{transform:translateY(-4px);border-color:rgba(240,239,233,.34);background:#1b1e1a}
+.project-featured{grid-column:1/-1;display:grid;grid-template-columns:1.12fr .88fr;min-height:340px}
+.project-featured .project-visual{height:100%;min-height:340px}
+.project-featured .project-info{display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,4vw,48px)}
+.project-featured .project-info h3{font-size:clamp(28px,4vw,42px);margin-top:25px}
+.project-featured .project-info>p{max-width:390px;min-height:0;font-size:12px;line-height:1.9}
+.project:not(.project-featured) .project-visual{height:245px}
+.project:not(.project-featured) .project-info{flex:1;display:flex;flex-direction:column}
+.project:not(.project-featured) .project-foot{margin-top:auto}
+.project-foot a{display:inline-flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid rgba(255,81,61,.55);transition:color .2s,border-color .2s}
+.project-foot a:hover{color:var(--red);border-color:var(--red)}
+.aureon-visual{background:#e65339;isolation:isolate}
+.aureon-visual:before{content:"";position:absolute;inset:12% 9%;border:1px solid rgba(25,26,23,.28);z-index:-1}
+.aureon-visual:after{content:"AUREON / DIGITAL ATELIER";position:absolute;right:8%;bottom:24%;font:8px var(--mono);letter-spacing:.18em;color:rgba(25,26,23,.7);writing-mode:vertical-rl}
+.visual-word{font-size:clamp(180px,27vw,310px);text-shadow:0 10px 35px rgba(25,26,23,.08)}
+.degree-visual{isolation:isolate;background:radial-gradient(ellipse at 50% 48%,#1a4a61 0%,#102b3b 48%,#0b1721 100%)}
+.degree-visual:before{content:"";position:absolute;inset:16px;border:1px solid rgba(180,235,255,.22);border-radius:3px;box-shadow:inset 0 0 35px rgba(88,205,255,.08)}
+.degree-visual:after{content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(120,218,255,.18);border-radius:50%;box-shadow:0 0 0 24px rgba(120,218,255,.035),0 0 0 48px rgba(120,218,255,.025);z-index:-1}
+.degree-mark strong{font-size:clamp(82px,11vw,122px);text-shadow:0 0 34px rgba(98,216,255,.42)}
+.degree-mark small{font-size:8px}
+.remex-visual{isolation:isolate;background:linear-gradient(145deg,#1a1b1a,#090a09 68%);color:#e5e4de}
+.remex-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.8%,rgba(255,81,61,.14) 50%,transparent 50.2%),linear-gradient(transparent 49.8%,rgba(255,81,61,.1) 50%,transparent 50.2%);background-size:42px 42px;opacity:.55}
+.remex-visual:after{content:"SYSTEM / MODULAR / ACTIVE";position:absolute;left:18px;top:50%;transform:translateY(-50%);font:7px var(--mono);letter-spacing:.18em;color:rgba(255,81,61,.7);writing-mode:vertical-rl}
+.remex-mark{font-size:clamp(36px,5vw,62px);letter-spacing:.13em;text-shadow:0 0 28px rgba(255,81,61,.16)}
+.project-meta{font-size:8px}
+@media(max-width:760px){
+ .project-list{grid-template-columns:1fr;gap:16px}
+ .project-featured{grid-column:auto;display:flex}
+ .project-featured .project-visual{height:230px;min-height:230px}
+ .project-featured .project-info{padding:19px}
+ .project-featured .project-info h3{font-size:25px;margin:20px 0 9px}
+ .project-featured .project-info>p{font-size:11px}
+ .project:not(.project-featured) .project-visual{height:230px}
+ .visual-word{font-size:190px}
+}
+@media(prefers-reduced-motion:reduce){.project{transition:none}.project:hover{transform:none}}
