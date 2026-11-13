@@ -1,91 +1,58 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f3f0e7">
-  <meta name="description" content="A precise, beautifully simple temperature conversion instrument.">
-  <title>DEGREE / Temperature instrument</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d1c">
+<meta name="description" content="A refined temperature conversion instrument. Three scales, one clear view.">
+<title>DEGREE° | Temperature, reframed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page-shell">
-    <header class="topbar">
-      <a class="wordmark" href="#" aria-label="Degree home"><span class="mark">°</span> DEGREE<span class="wordmark-period">.</span></a>
-      <div class="topbar-note"><span class="live-dot"></span> UNIT CONVERSION INSTRUMENT <span class="topbar-index">NO. 001</span></div>
-      <a class="top-link" href="#method">THE METHOD <span aria-hidden="true">↗</span></a>
-    </header>
-
-    <main>
-      <section class="intro">
-        <div class="eyebrow"><span>01 / TEMPERATURE</span><span>CELSIUS · FAHRENHEIT · KELVIN</span></div>
-        <h1>Make sense<br>of <span>the heat.</span></h1>
-        <p class="intro-copy">One value. Three scales. No mental arithmetic required.</p>
-      </section>
-
-      <section class="instrument" aria-labelledby="instrument-title">
-        <div class="instrument-head">
-          <div><span class="section-kicker">LIVE CONVERTER / 01</span><h2 id="instrument-title">Set your temperature</h2></div>
-          <button class="reset-button" id="resetButton" type="button"><span aria-hidden="true">↺</span> RESET</button>
-        </div>
-
-        <div class="input-stage">
-          <label class="input-label" for="temperatureInput">YOUR VALUE</label>
-          <div class="input-line">
-            <input id="temperatureInput" type="number" inputmode="decimal" step="any" placeholder="25" autocomplete="off" aria-describedby="inputHint errorMessage">
-            <span class="input-unit" id="inputUnitSymbol">°C</span>
-          </div>
-          <div class="input-bottom"><span id="inputHint">Enter a value to begin</span><span class="input-state"><span class="live-dot"></span> LIVE</span></div>
-        </div>
-
-        <div class="unit-picker" role="group" aria-label="Choose input unit">
-          <button class="unit-option active" type="button" data-unit="C" aria-pressed="true"><span>°C</span><small>CELSIUS</small></button>
-          <button class="unit-option" type="button" data-unit="F" aria-pressed="false"><span>°F</span><small>FAHRENHEIT</small></button>
-          <button class="unit-option" type="button" data-unit="K" aria-pressed="false"><span>K</span><small>KELVIN</small></button>
-        </div>
-
-        <p class="error-message" id="errorMessage" role="alert" aria-live="polite"></p>
-
-        <div class="results-head"><span>CONVERTED VALUES</span><span>OUTPUT / 03</span></div>
-        <div class="results-grid" aria-live="polite" aria-atomic="true">
-          <article class="result result-primary" data-result="C">
-            <div class="result-top"><span class="result-unit">°C</span><span class="result-name">CELSIUS</span></div>
-            <div class="result-value" id="resultC">--<span>°</span></div>
-            <div class="result-foot"><span>01 / 03</span><button class="copy-button" data-copy="C" type="button" aria-label="Copy Celsius value">COPY ↗</button></div>
-          </article>
-          <article class="result" data-result="F">
-            <div class="result-top"><span class="result-unit">°F</span><span class="result-name">FAHRENHEIT</span></div>
-            <div class="result-value" id="resultF">--<span>°</span></div>
-            <div class="result-foot"><span>02 / 03</span><button class="copy-button" data-copy="F" type="button" aria-label="Copy Fahrenheit value">COPY ↗</button></div>
-          </article>
-          <article class="result" data-result="K">
-            <div class="result-top"><span class="result-unit">K</span><span class="result-name">KELVIN</span></div>
-            <div class="result-value" id="resultK">--<span>K</span></div>
-            <div class="result-foot"><span>03 / 03</span><button class="copy-button" data-copy="K" type="button" aria-label="Copy Kelvin value">COPY ↗</button></div>
-          </article>
-        </div>
-        <div class="instrument-foot"><span>ABSOLUTE ZERO IS THE LOWER LIMIT.</span><span id="statusText">AWAITING INPUT</span></div>
-      </section>
-
-      <section class="method" id="method">
-        <div class="method-label"><span>02 / THE METHOD</span><span>BUILT FOR CLARITY</span></div>
-        <div class="method-content">
-          <h2>Three scales.<br><span>One reference point.</span></h2>
-          <p>Every conversion passes through Celsius as a common reference. Values below absolute zero are rejected, and results are rounded for readability without changing the underlying calculation.</p>
-        </div>
-        <div class="scale-notes">
-          <div><span class="scale-symbol">°C</span><span class="scale-name">CELSIUS</span><span class="scale-desc">Water freezes at 0°.</span></div>
-          <div><span class="scale-symbol">°F</span><span class="scale-name">FAHRENHEIT</span><span class="scale-desc">Water freezes at 32°.</span></div>
-          <div><span class="scale-symbol">K</span><span class="scale-name">KELVIN</span><span class="scale-desc">Absolute zero begins at 0.</span></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer"><a class="wordmark" href="#"><span class="mark">°</span> DEGREE<span class="wordmark-period">.</span></a><span>DESIGNED TO MAKE THE NUMBERS MAKE SENSE.</span><span>© 2026 / REM</span></footer>
-  </div>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div><div class="grain"></div>
+<div class="app-shell">
+<header class="topbar">
+<a class="brand" href="#" aria-label="Degree home"><span class="brand-symbol">°</span><span>DEGREE<span class="brand-dot">.</span></span></a>
+<div class="top-meta"><span class="status-light"></span> PRECISION CONVERTER <span class="meta-divider">/</span> VOL. 01</div>
+<a class="top-link" href="#about">ABOUT <span>↗</span></a>
+</header>
+<main>
+<section class="hero">
+<div class="hero-copy">
+<p class="eyebrow"><span class="eyebrow-line"></span> A SMALL STUDY IN TEMPERATURE</p>
+<h1>Feel the<br><em>numbers.</em></h1>
+<p class="hero-description">Temperature, translated.<br>A quieter way to move between scales.</p>
+<div class="hero-foot"><span>01 — 03</span><span>CELSIUS / FAHRENHEIT / KELVIN</span></div>
+</div>
+<section class="converter glass-panel" aria-labelledby="converter-title">
+<div class="panel-top"><div><p class="panel-kicker">LIVE INSTRUMENT <span>●</span></p><h2 id="converter-title">Temperature</h2></div><button id="resetButton" class="reset-button" type="button" aria-label="Reset converter">↻ <span>RESET</span></button></div>
+<div class="input-wrap">
+<label for="temperatureInput">ENTER A VALUE</label>
+<div class="value-entry"><input id="temperatureInput" type="number" inputmode="decimal" step="any" placeholder="24" autocomplete="off" aria-describedby="inputHint errorMessage"><span id="inputUnitSymbol">°C</span></div>
+<div class="input-caption"><span id="inputHint">Waiting for your reading</span><span class="live-label"><i></i> LIVE</span></div>
+</div>
+<div class="unit-select" role="group" aria-label="Choose input unit">
+<button class="unit-button selected" type="button" data-unit="C" aria-pressed="true"><b>°C</b><span>CELSIUS</span></button>
+<button class="unit-button" type="button" data-unit="F" aria-pressed="false"><b>°F</b><span>FAHRENHEIT</span></button>
+<button class="unit-button" type="button" data-unit="K" aria-pressed="false"><b>K</b><span>KELVIN</span></button>
+</div>
+<p class="error-message" id="errorMessage" role="alert" aria-live="polite"></p>
+<div class="output-heading"><span>CONVERTED READINGS</span><span>RESULTS / 03</span></div>
+<div class="outputs" aria-live="polite" aria-atomic="true">
+<article class="output-card is-active" data-result="C"><div class="output-label"><span>01</span><span>CELSIUS</span></div><div class="output-number" id="resultC">--<small>°C</small></div><button type="button" class="copy-button" data-copy="C">COPY VALUE ↗</button></article>
+<article class="output-card" data-result="F"><div class="output-label"><span>02</span><span>FAHRENHEIT</span></div><div class="output-number" id="resultF">--<small>°F</small></div><button type="button" class="copy-button" data-copy="F">COPY VALUE ↗</button></article>
+<article class="output-card" data-result="K"><div class="output-label"><span>03</span><span>KELVIN</span></div><div class="output-number" id="resultK">--<small>K</small></div><button type="button" class="copy-button" data-copy="K">COPY VALUE ↗</button></article>
+</div>
+<div class="panel-bottom"><span>LOWER LIMIT / ABSOLUTE ZERO</span><span id="statusText">STANDBY</span></div>
+</section>
+</section>
+<section class="about" id="about"><div class="about-index">02 / THE PRINCIPLE</div><div class="about-copy"><h2>Three languages.<br><span>One physical world.</span></h2><p>Every reading is normalized through Celsius, then translated into the other scales. The maths stays exact. The display stays human.</p></div><div class="fact-strip"><div><span class="fact-symbol">−273.15°</span><span class="fact-label">CELSIUS / ABSOLUTE ZERO</span></div><div><span class="fact-symbol">−459.67°</span><span class="fact-label">FAHRENHEIT / ABSOLUTE ZERO</span></div><div><span class="fact-symbol">0 K</span><span class="fact-label">KELVIN / ABSOLUTE ZERO</span></div></div></section>
+</main>
+<footer class="footer"><a class="brand" href="#"><span class="brand-symbol">°</span><span>DEGREE<span class="brand-dot">.</span></span></a><span>MADE FOR CLEARER READINGS.</span><span>REM / 2026</span></footer>
+</div>
 </body>
 </html>
