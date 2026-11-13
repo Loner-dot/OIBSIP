@@ -23,6 +23,7 @@ A dark, atmospheric glass interface with restrained cyan lighting, layered trans
 - **AUREON Studio:** https://aureon-lyart.vercel.app/?utm_source=chatgpt.com#top
 - **DEGREE° Temperature Converter:** https://temperature-converter-mocha-nine.vercel.app/#method
 - **REM Portfolio:** https://rem-portfolio-azure.vercel.app/#work
+- **DAYMARK:** https://github.com/Loner-dot/OIBSIP/tree/main/Level-1-Bonus-Project-DAYMARK
 - **REMEX:** an ongoing WhatsApp automation project
 
 ## Run locally
