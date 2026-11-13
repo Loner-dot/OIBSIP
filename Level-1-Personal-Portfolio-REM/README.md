@@ -18,8 +18,8 @@ A responsive personal portfolio created for the Oasis Infobyte Web Development a
 Open `index.html` in a browser. No build tools or dependencies are required.
 
 ## Project preview
-- AUREON: https://aureon-lyart.vercel.app/
-- DEGREE°: https://temperature-converter-mocha-nine.vercel.app/
+- AUREON: https://aureon-lyart.vercel.app/?utm_source=chatgpt.com#top
+- DEGREE°: https://temperature-converter-mocha-nine.vercel.app/#method
 
 ## Contact
 - Telegram: https://t.me/rem_loves_reena
@@ -27,3 +27,5 @@ Open `index.html` in a browser. No build tools or dependencies are required.
 
 ---
 Created by REM.
+
+- REM Portfolio: https://rem-portfolio-azure.vercel.app/#work
